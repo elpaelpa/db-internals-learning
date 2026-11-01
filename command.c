@@ -10,6 +10,5 @@ MetaCommandResult do_meta_command(InputBuffer* input_buffer){
     }
     else{
         return META_COMMAND_UNRECOGNIZED_COMMAND;
-    }
-
-};
+    }  
+}
