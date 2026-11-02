@@ -12,8 +12,8 @@
 //ROW  (hardcoded table for now)
 typedef struct{
   uint32_t id;
-  char username[COLUMN_USERNAME_SIZE];
-  char email[COLUMN_EMAIL_SIZE];
+  char username[COLUMN_USERNAME_SIZE + 1]; //+1 for null terminator character
+  char email[COLUMN_EMAIL_SIZE + 1];//+1 for null terminator character
 } Row;
 
 extern const uint32_t ID_SIZE;

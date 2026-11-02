@@ -9,7 +9,8 @@
 typedef enum { 
   PREPARE_SUCCESS,
   PREPARE_UNRECOGNIZED_STATEMENT,
-  PREPARE_SYNTAX_ERROR
+  PREPARE_SYNTAX_ERROR,
+  PREPARE_STRING_TOO_LONG
 } PrepareResult;
 
 typedef enum { 
@@ -27,7 +28,7 @@ typedef enum {
   EXECUTE_TABLE_FULL
 } ExecuteResult;
 
-
+PrepareResult prepare_insert(InputBuffer* input_buffer, Statement* statement);
 PrepareResult prepare_statement(InputBuffer*, Statement*);
 ExecuteResult execute_statement(Statement*,Table* table);
 
